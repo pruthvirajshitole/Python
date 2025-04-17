@@ -1,0 +1,57 @@
+Python Virtual Environment:
+
+    A Python Virtual Environment is an isolated space where you can work on your Python projects,
+    separately from your system-installed Python. You can set up your own libraries and dependencies
+    without affecting the system Python. We will use virtualenv to create a virtual environment in Python.
+
+
+What is a Virtual Environment?
+    A virtual environment is a tool that helps to keep dependencies required by different
+    projects separate by creating isolated Python virtual environments for them.
+    This is one of the most important tools that most Python developers use.
+
+
+Why do we need a virtual environment?
+    Imagine a scenario where you are working on two web-based Python projects one of them uses Django 4.0
+    and the other uses Django 4.1 (check for the latest Django versions and so on). In such situations,
+    we need to create a virtual environment in Python that can be really useful to maintain the 
+    dependencies of both projects.
+
+
+When and where to use a virtual environment?
+    By default, every project on your system will use these same directories to store 
+    and retrieve site packages (third-party libraries).
+
+
+How does this matter?
+    Now, in the above example of two projects, you have two versions of Django.
+    This is a real problem for Python since it can’t differentiate between versions
+    in the “site-packages” directory. So both v1.9 and v1.10 would reside in the same
+    directory with the same name.
+
+
+    This is where virtual environments come into play.
+    To solve this problem, we just need to create two separate virtual environments for both projects.
+
+    The great thing about this is that there are no limits to the number of environments
+    you can have since they’re just directories containing a few scripts.
+
+    A virtual Environment should be used whenever you work on any Python-based project.
+    It is generally good to have one new virtual environment for every Python-based project
+    you work on. So the dependencies of every project are isolated from the system and each other.
+
+
+Creating Virtual Environment:
+on command prompt:
+    python -m venv myenv
+
+Activating Virtual Environment:
+    myvenv\Scripts\activate.bat
+
+    Once the Viratual Environment is activated, any packages that you install using
+    pip will be installed in the Viratual Environment, rather than in the global python
+    environment.
+
+Deactivating Viratual Environment:
+    deactivate
+

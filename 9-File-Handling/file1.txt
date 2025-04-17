@@ -1,0 +1,9 @@
+Welcome
+welcome
+Checking how to insert()
+Checking how to insert()
+Hello,
+I love Python.Good evening!!!
+Good Morning
+Good Afternoon
+Good evening!!!

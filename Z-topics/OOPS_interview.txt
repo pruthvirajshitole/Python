@@ -1,0 +1,197 @@
+1.What is OOPS and it's pillar?
+
+Object-Oriented Programming (OOP) is a programming approach that organizes software into objects,
+which represent real-world entities. It helps in writing modular, reusable, and scalable code.
+
+Key Concepts in Python OOPs: 
+
+Class & Object –
+    A class is a blueprint or template for creating objects, while an object is an instance of a class.
+    Example: A Car is a class, and a specific TATA Model is an object.
+
+Encapsulation – 
+    Protecting data by restricting direct access and allowing controlled interaction through methods.
+    Example: In a bank account, the balance is hidden, and transactions happen via secure functions.
+
+Inheritance – 
+    Allowing one class to derive properties and behavior from another, promoting code reusability.
+    Example: A Truck inherits common properties from a Vehicle class but has additional features like a cargo hold.
+
+Polymorphism –
+    The ability to use the same method in different ways across multiple classes.
+    Example: A bird, airplane, and drone all have a "fly" function but execute it differently.
+
+Abstraction –
+    Hiding complex implementation details and exposing only essential functionalities.
+    Example: When using a TV remote, you don’t need to understand how internal circuits work; you just press buttons.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+2.What is inheritance and it's type?
+
+Inheritance is an OOP feature that allows a class (child class) to derive properties and behavior from another class (parent class).
+It promotes code reusability and helps in building a relation of classes.
+
+Types of Inheritance in Python:
+
+1. Single Inheritance
+    A child class inherits from a single parent class.
+    Example: A Car class inherits features from a Vehicle class.
+
+2. Multiple Inheritance
+    A child class inherits from multiple parent classes.
+    Example: A child class inherits features from both father class and mother class.
+
+3. Multilevel Inheritance
+    A child class inherits from a parent class, which itself inherits from another parent class.
+    Example: A Grandfather → Father → Child relationship.
+
+4. Hierarchical Inheritance
+    Multiple child classes inherit from the same parent class.
+    Example: A Vehicle class has multiple child classes like Car, Bike, and Truck.
+
+5. Hybrid Inheritance
+    A combination of multiple types of inheritance (e.g., multiple + multilevel).
+    Example: Tea inherits properties from sugar and milk, where as sugar is derived from sugarcane.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+3.What is polymorphism?
+
+The ability to use the same method in different ways across multiple classes.
+
+Types:
+    1.Compile-time Polymorphism (Method Overloading):
+        Allows multiple methods with the same name but different parameters.
+        Python does not support method overloading directly but can be achieved using default arguments.
+        Example: Function with default parameters behaving differently based on the number of arguments.
+
+    2.Runtime Polymorphism (Method Overriding):
+        A subclass provides a specific implementation of a method that exists in its parent class.
+        The method in the child class overrides the method of the parent class.
+        Example: Different banks have different interest rates but follow the same method name.
+
+-----------------------------------------------------------------------------------------------------------------
+
+4.What is Method Overloading in Python?
+
+Method Overloading is a feature in OOP that allows multiple methods in the same class to have the same name
+but different parameters (arguments).
+However, Python does not support traditional method overloading like Java or C++.
+Instead, we achieve method overloading using default arguments or the *args and **kwargs.
+
+Can you give a real-time example of Method Overloading in Python?
+
+A real-world example of method overloading is seen in an online shopping platform when calculating the
+final bill amount based on different inputs.
+
+If a customer provides only item prices → Calculate total cost.
+If a customer applies a discount code → Apply discount and calculate total.
+If a customer applies both discount and tax → Apply both and calculate final cost.
+
+-----------------------------------------------------------------------------------------------------------------
+
+5.What is the super() function in Python? Can we use super() in different methods?
+
+The super() function in Python is used in inheritance to call a method from the parent class inside a child class.
+It helps in reusing code and avoiding duplicate method definitions.
+
+Can We Use super() in Different Methods?
+Yes! The super() function can be used in multiple methods inside a child class.
+
+Example Scenarios Where super() is Used in Different Methods:
+    In the Constructor (__init__()) → To initialize parent class attributes.
+    In Other Methods → To invoke parent class methods inside overridden child class methods.
+
+Using super() multiple times in a class is useful when a child class overrides multiple
+parent class methods but still needs to access their original implementations.
+
+----------------------------------------------------------------------------------------------------------------
+
+6.What are Access Specifiers in Python? Can you explain their types?
+
+Access Specifiers in Python define the visibility and accessibility of class attributes (variables) and methods (functions).
+They help in data hiding and security by controlling how data is accessed inside and outside the class.
+
+Types of Access Specifiers in Python:
+
+Public (public):
+    Attributes and methods declared without any underscore are public.
+    Accessible from anywhere (inside and outside the class).
+    Example: self.name = "Tea"
+
+Protected (_protected):
+    Attributes and methods prefixed with a single underscore _ are protected.
+    Can be accessed inside the class and in child classes (but not recommended to access directly outside).
+    Example: self._temperature = 80
+
+Private (__private):
+    Attributes and methods prefixed with double underscores __ are private.
+    Accessible only within the class (not even in child classes).
+    Example: self.__recipe = "Secret Blend"
+
+----------------------------------------------------------------------------------------------------------------
+
+7.What is encapsulation?
+
+Encapsulation is the concept of bundling data (variables) and methods (functions) together within a class and restricting
+direct access to some details.
+It helps in data protection and security by allowing controlled access to class attributes.
+
+Real-Time Example: Bank Account
+    Consider a bank account where the balance should not be modified directly but only through secure transactions.
+
+Encapsulation in a Bank Account:
+    Private Data: The account balance is kept private to prevent unauthorized modifications.
+    Controlled Access: The balance can only be accessed or modified through deposit() and withdraw() methods, ensuring security.
+
+Example in real life:
+    You cannot directly change your bank balance.
+    You must use official transactions (deposit/withdrawal methods) provided by the bank.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+8.What is abstraction?
+
+Abstraction is an OOP concept that hides implementation details and only exposes essential features to the user.
+It simplifies code complexity and increases security by showing only what is necessary.
+
+Key Features of Abstraction:
+    - Hides unnecessary implementation details.
+    - Provides a clear interface for interaction.
+    - Achieved using abstract classes and methods in Python (ABC module).
+
+Real-Time Example: ATM Machine
+    Consider an ATM machine, where users interact with a simple interface without knowing the
+    internal working of the system.
+
+Abstraction in an ATM System:
+    - Hidden Details: The ATM processes user requests internally
+                      (e.g., verifying PIN, communicating with the bank server).
+
+    - Exposed Features: Users can only see the necessary operations like
+                        "Withdraw Cash", "Check Balance", and "Deposit Money".
+
+Example in Real Life:
+    - You use an ATM card to withdraw money but don’t need to know how the backend transactions are processed.
+    - The complex logic (like database operations, encryption, or bank verification) is hidden from users.
+    
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+9.What is a decorator in Python?
+
+A decorator in Python is a special function that modifies the behavior of another function without changing its code.
+It allows us to add functionality dynamically to functions or methods.
+
+How Does a Decorator Work?
+
+A decorator takes a function as input, modifies or enhances it, and returns the updated function.
+It is often used with the @decorator_name syntax before a function.
+
+Common Use Cases of Decorators:
+    Logging – Automatically logs function calls.
+    Authentication – Checks user permissions before executing a function.
+    Timing Execution – Measures how long a function takes to run.
+    Modifying Function Output – Can alter return values dynamically.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
